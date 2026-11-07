@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#174d3c">
+  <title>Meu cantinho pet — Carteira de Identidade Pet</title>
+  <link rel="icon" href="assets/carteira-identidade-pet.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="welcome.css">
+  <script src="vendor/jspdf.umd.min.js" defer></script>
+  <script src="vendor/qrcode.min.js" defer></script>
+  <script src="documents.js" defer></script>
+  <script src="welcome.js" defer></script>
+  <script src="app.js" defer></script>
+  <script src="install.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+  <aside class="sidebar">
+    <a href="./" class="brand" aria-label="Meu cantinho pet, início"><img src="icon.svg" class="brand-symbol" width="39" height="39" alt="" style="border-radius:10px"><span>identidade<span class="brand-pet">pet.</span><small>O cantinho de quem é da família</small></span></a>
+    <div class="sidebar-label">ESPAÇO DO TUTOR</div>
+    <nav id="desktop-nav" aria-label="Navegação principal"></nav>
+    <div class="sidebar-note"><span class="note-icon" aria-hidden="true">♡</span><strong>Uma vida de histórias.</strong><p>Os documentos, os cuidados e o jeitinho que só o seu pet tem.</p></div>
+    <button class="sidebar-settings" data-page="settings">Configurações e backup <span>↗</span></button>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><div><span class="topbar-eyebrow">CARTEIRA DE IDENTIDADE PET</span><p id="breadcrumb">Meu cantinho</p></div><div class="topbar-actions"><span class="device-badge"><i></i> Salvo neste dispositivo</span><button class="avatar-button" data-page="settings" aria-label="Configurações do tutor">T</button></div></header>
+    <main id="main" tabindex="-1"></main>
+    <footer class="app-footer">Feito para quem já é da família. <span>Identificação pet privada e afetiva.</span></footer>
+  </div>
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Navegação no celular"></nav>
+  <dialog id="editor" aria-labelledby="dialog-title"><div class="dialog-heading"><div><span class="eyebrow">DO JEITINHO DELE</span><h2 id="dialog-title">Novo pet na família</h2></div><button class="icon-button" id="close-editor" aria-label="Fechar">×</button></div><div id="editor-content"></div></dialog>
+  <dialog id="pdf-dialog" class="pdf-dialog" aria-labelledby="pdf-title"><div class="dialog-heading"><h2 id="pdf-title">Seu documento</h2><button class="icon-button" id="close-pdf" aria-label="Fechar documento">×</button></div><p class="muted">Para imprimir, use papel A4, escala de 100% e desative o ajuste à página.</p><iframe id="pdf-frame" title="Prévia do documento em PDF"></iframe><button class="btn primary" id="pdf-download">Baixar este PDF ↓</button></dialog>
+  <input id="backup-file" type="file" accept="application/json,.json" hidden>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
